@@ -10,7 +10,7 @@ class TestLogin:
         self.response = login(self.user, self.pswd)
 
     def test_login_200(self):
-        assert self.response.status_code == 200, 'status code is not OK'
+        assert self.response.status_code == 200, 'status code is not ok'
 
     def test_login_info(self):
         assert self.response.json()['user']['firstName'] == 'Andy', 'firstName is not correct'
